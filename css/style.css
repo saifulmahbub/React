@@ -1,13 +1,14 @@
 .countries {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
-.box {
+.style {
   border: 2px solid goldenrod;
-  background-color: mediumseagreen;
-  border-radius: 5px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  padding: 10px;
 }
-.box img {
-  width: 200px;
+.style img {
+  width: 100px;
 }

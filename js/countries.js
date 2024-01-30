@@ -1,24 +1,18 @@
-const saiful = () => {
+const restCountries = () => {
   fetch("https://restcountries.com/v3.1/all")
     .then((res) => res.json())
-    .then((data) => Display(data));
+    .then((data) => displayCountries(data));
 };
-
-const Display = (countries) => {
-  console.log(countries);
-  const countriesHtmL = countries.map((country) => getAllCountries(country));
-
-  const container = document.getElementById("countries");
-  container.innerHTML = countriesHtmL.join(" ");
+const displayCountries = (country) => {
+  console.log(country);
+  const countriesHtml = country.map((desh) => getCountry(desh));
+  const box = document.getElementById("countries");
+  box.innerHTML = countriesHtml.join(" ");
 };
-
-const getAllCountries = (land) => {
-  return `
-  <div class="box">
-    <h2>${land.capital}</h2>
-    <img src="${land.flags.png} "/>
-  <div>
-
-  `;
+const getCountry = (desh) => {
+  return `<div class="style">
+    <h2>${desh.name.common}</h2>
+    <img src="${desh.flags.png}">
+  </div>`;
 };
-saiful();
+restCountries();
