@@ -17,6 +17,8 @@ const getCountry = ({ name, flags, region, area }) => {
     <p>Area: ${area}</p>
     <p>Continent: ${region}</p>
     <img src="${flags.png}">
+    <p>Continent: ${region}</p>
+
   </div>`;
 };
 restCountries();
